@@ -1,0 +1,98 @@
+@import url('./reset.css');
+@import url('./base.css');
+
+.title {
+  text-align: center;
+  margin: 0 0 20px 0;
+  font-size: 28px;
+  color: #007bff;
+}
+.form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.form-input {
+  width: 300px;
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  outline: none;
+  transition: border-color .2s;
+}
+.form-input:focus {
+  border-color: #007bff;
+}
+.form-btn {
+  padding: 10px 18px;
+  font-size: 16px;
+  background: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.form-btn:hover {
+  background: #0056b3;
+}
+.gallery-section {
+  padding: 0 16px 32px;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.gallery__item {
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+.photo-card__img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+.info {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px;
+  font-size: 14px;
+  background: #fafafa;
+}
+/*Лоадер*/
+.is-hidden {
+  display: none !important;
+}
+.loader {
+  display: block;
+  width: 56px;
+  height: 56px;
+  margin: 10px auto;
+  border-radius: 50%;
+  border: 6px solid rgba(0, 0, 0, 0.12);
+  border-top-color: #007bff;
+  animation: spin 0.9s linear infinite;
+  box-sizing: border-box;
+}
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 600px) {
+  .form-input {
+    width: 180px;
+  }
+  .photo-card__img {
+    height: 140px;
+  }
+}
