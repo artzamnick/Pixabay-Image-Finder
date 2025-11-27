@@ -17,12 +17,17 @@
           class="form-input"
           placeholder="Введіть слово для пошуку..."
           aria-label="search-input"
+          name="query"
+          autocomplete="off"
         />
         <button type="submit" class="form-btn">Пошук</button>
       </form>
-      <span class="loader is-hidden" aria-hidden="true"></span>
       <section class="gallery-section">
         <ul class="gallery"></ul>
+        <div class="controls">
+          <button type="button" class="load-more is-hidden">Load more</button>
+          <span class="loader is-hidden" aria-hidden="true">Loading...</span>
+        </div>
       </section>
     </main>
     <script type="module" src="./main.js"></script>
