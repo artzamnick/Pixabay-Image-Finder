@@ -7,7 +7,7 @@
     <script type="module" crossorigin src="/goit-js-hw-12/index.js"></script>
     <link rel="modulepreload" crossorigin href="/goit-js-hw-12/assets/vendor-MgecxatS.js">
     <link rel="stylesheet" crossorigin href="/goit-js-hw-12/assets/vendor-CWKLx11g.css">
-    <link rel="stylesheet" crossorigin href="/goit-js-hw-12/assets/index-zR9al1aH.css">
+    <link rel="stylesheet" crossorigin href="/goit-js-hw-12/assets/index-BkoUTQaM.css">
   </head>
   <body>
     <main>
@@ -18,12 +18,17 @@
           class="form-input"
           placeholder="Введіть слово для пошуку..."
           aria-label="search-input"
+          name="query"
+          autocomplete="off"
         />
         <button type="submit" class="form-btn">Пошук</button>
       </form>
-      <span class="loader is-hidden" aria-hidden="true"></span>
       <section class="gallery-section">
         <ul class="gallery"></ul>
+        <div class="controls">
+          <button type="button" class="load-more is-hidden">Load more</button>
+          <span class="loader is-hidden" aria-hidden="true">Loading...</span>
+        </div>
       </section>
     </main>
   </body>
